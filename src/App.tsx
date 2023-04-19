@@ -39,10 +39,8 @@ const App: React.FC = () => {
     const [selectedJob, setSelectedJob] = useState<Job | undefined>(undefined);
 
     useEffect(() => {
-        // Replace this with the actual API call to get the job data
         async function fetchJobs() {
             try {
-                // Replace the URL with your API endpoint
                 const response = await axios.get<Job[]>(
                     'http://localhost:3000/jobs',
                 );
